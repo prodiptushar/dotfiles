@@ -1,0 +1,2 @@
+# ignoring all zsh plugins
+dot_config/zsh/plugins/**

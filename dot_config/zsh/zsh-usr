@@ -1,0 +1,26 @@
+export PYTHONPATH=$PYTHONPATH:/usr/bin/python3.9
+alias n="neomutt"
+alias nb="newsboat"
+alias yt="ytfzf -t"
+alias pg="ping google.com"
+. /etc/profile.d/fzf.zsh
+alias cat="bat"
+bindkey -M viins 'jk' vi-cmd-mode
+bindkey -M viins 'kj' vi-cmd-mode
+bindkey '^ ' autosuggest-accept
+# eval "$(lua /home/prodip/build/z.lua/z.lua --init zsh)"
+alias ls="exa"
+#export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+alias sx='source x/bin/activate'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --ignore-file ~/.config/fd/ignore'
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+export FZF_CTRL_R_OPTS='--sort --exact'
+fzf-history-widget-accept() {
+  fzf-history-widget
+  zle accept-line
+}
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+zle     -N     fzf-history-widget-accept
+# bindkey '^X^R' fzf-history-widget-accept
+bindkey "^[x" fzf-history-widget-accept
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
