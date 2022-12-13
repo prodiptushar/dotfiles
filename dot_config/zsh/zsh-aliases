@@ -82,5 +82,5 @@ esac
 alias pacs='$HOME/.scripts/pacman-pkgfind'
 alias yays='$HOME/.scripts/yay-pkgfind'
 alias r='lfub'
-alias e='emacsclient -c'
+alias e='chezmoi edit --watch'
 alias ls=exa
