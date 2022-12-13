@@ -9,8 +9,6 @@ F2
 super + e ; {e,q,f,b}
       {emacsclient -c -a 'emacs',qutebrowser,firefox,brave}
 
-super+ctrl+Return
-  st -e tmux
 super+Return
 	st
 

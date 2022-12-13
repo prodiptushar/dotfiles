@@ -1,7 +1,7 @@
 #!/bin/bash
 
 bookmark="$(xclip -o)"
-file="$HOME/.local/sync/snippets"
+file="$HOME/.local/share/chezmoi/dot_local/sync/snippets"
 
 if grep -q "$bookmark" "$file"; then
   notify-send "Oops" "Already bookmarked"

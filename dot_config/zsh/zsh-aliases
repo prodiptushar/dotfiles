@@ -4,7 +4,7 @@ alias z='zi'
 alias g='lazygit'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
-alias sedit='sudo -E nvim'
+alias snvim='sudo -E nvim'
 alias zt="zathura"
 
 # alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
@@ -82,5 +82,6 @@ esac
 alias pacs='$HOME/.scripts/pacman-pkgfind'
 alias yays='$HOME/.scripts/yay-pkgfind'
 alias r='lfub'
-alias e='chezmoi edit --watch'
+alias e='chezmoi edit --apply'
+alias cm='chezmoi'
 alias ls=exa
