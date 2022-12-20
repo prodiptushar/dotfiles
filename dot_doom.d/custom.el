@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(org-web-tools zoxide fancy-dabbrev company-wordfreq company-tabnine company-dict chess))
+   '(openwith org-web-tools zoxide fancy-dabbrev company-wordfreq company-tabnine company-dict chess))
  '(smtpmail-smtp-server "smtp.gmail.com" t)
  '(smtpmail-smtp-service 25)
  '(warning-suppress-types

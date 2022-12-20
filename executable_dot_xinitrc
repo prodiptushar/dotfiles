@@ -60,9 +60,7 @@ sxhkd &
 #dwmblocks &
 #sh $HOME/code/linux/scripts/searx &
 #mw -Y &
-flameshot &
 dunst &
 #sudo docker run -d -t -p 5660:80 --name rss-bridge rssbridge/rss-bridge:latest &
 #albert &
 #ibus-daemon -drxR &
-copyq & 

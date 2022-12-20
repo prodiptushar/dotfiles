@@ -19,6 +19,7 @@ brave-bin
 cabal-install
 calibre
 caprine
+chezmoi
 chromium
 cht.sh-git
 clang
@@ -34,7 +35,7 @@ dunst
 efibootmgr
 element-desktop
 elinks
-emacs
+emacs-nativecomp
 eslint
 espeak-ng
 exa

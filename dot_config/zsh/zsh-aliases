@@ -78,9 +78,6 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	# echo 'Other OS'
 	;;
 esac
-
-alias pacs='$HOME/.scripts/pacman-pkgfind'
-alias yays='$HOME/.scripts/yay-pkgfind'
 alias r='lfub'
 alias e='chezmoi edit --apply'
 alias cm='chezmoi'

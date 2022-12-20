@@ -100,10 +100,10 @@ awful.layout.layouts = {
 -- }}}
 -- startup
 
-awful.util.spawn("copyq &")
-awful.util.spawn("flameshot &")
-awful.util.spawn("nitrogen --restore &")
--- awful.util.spawn("emacs --daemon &")
+awful.util.spawn("copyq")
+awful.util.spawn("flameshot")
+awful.util.spawn("nitrogen --restore")
+awful.util.spawn("emacs --daemon")
 
 -- startup
 --

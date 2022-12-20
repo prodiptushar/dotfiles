@@ -1,77 +1,135 @@
+#
+# wm independent hotkeys
+#
+
+# Personal Config
 
 # Sound control
-F3
-	pactl set-sink-volume @DEFAULT_SINK@ +10% ; pkill -RTMIN+10 dwmblocks
-F2
-	pactl set-sink-volume @DEFAULT_SINK@ -10% ; pkill -RTMIN+10 dwmblocks
+{F3,F2}
+	pactl set-sink-volume @DEFAULT_SINK@ {+10%,-10%}
 
+# terminal emulator
+super + Return
+	st
 # Launcher Unit
 super + e ; {e,q,f,b}
       {emacsclient -c -a 'emacs',qutebrowser,firefox,brave}
 
-super+Return
-	st
+super + d ; {p,e,u,s,a}
+	{passmenu,$HOME/.scripts/dmoji,$HOME/.scripts/urlhandeler,$HOME/.scripts/get-snip,dmenu_run -l 5}
 
-# ROfi and Dmenu
-# super+p
-# 	dmenu_run -l 8
- # rofi -show combi -combi-modes "drun,window" -modes combi
- # rofi -modi emoji -show emoji
-super+s;s
+super + s ; s
 	$HOME/.scripts/save-snip
-super+d ; {p,e,u,s}
-	{passmenu,$HOME/.scripts/dmoji,$HOME/.scripts/urlhandeler,$HOME/.scripts/get-snip}
 
-Print
-  flameshot "gui"
+# Personal Config
 
-##alt+y
-#  youtube-mpv &
-#XF86Audio{Prev,Next}
-#	mpc -q {prev,next}
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
 #
-# super + e ; {n,a}
-# 	  emacsclient -c --eval {'(org-roam-capture)','(org-agenda-list)'}
-#@XF86LaunchA
-#	scrot -s -e 'image_viewer $f'
+# bspwm hotkeys
 #
-#super + shift + equal
-#	sxiv -rt "$HOME/image"
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+super + {_,shift + }w
+	bspc node -{c,k}
+
+# alternate between the tiled and monocle layout
+# super + m
+# 	bspc desktop -l next
+
+# send the newest marked node to the newest preselected node
+# super + y
+# 	bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest window
+# super + g
+# 	bspc node -s biggest.window
+
 #
-#XF86LaunchB
-#	xdotool selectwindow | xsel -bi
+# state/flags
 #
-#super + {h,j,k,l}
-#	bspc node -f {west,south,north,east}
+
+# set the window state
+super + m ; {t,shift + t,f}
+	bspc node -t {tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
 #
-#super + alt + {0-9}
-#	mpc -q seek {0-9}0%
+# focus/swap
 #
-#super + {alt,ctrl,alt + ctrl} + XF86Eject
-#	sudo systemctl {suspend,reboot,poweroff}
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous window in the current desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,@space}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
 #
-#super + {_,shift + }{h,j,k,l}
-#	bspc node -{f,s} {west,south,north,east}
+# preselect
 #
-#{_,shift + ,super + }XF86MonBrightness{Down,Up}
-#	bright {-1,-10,min,+1,+10,max}
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
 #
-#super + o ; {e,w,m}
-#	{gvim,firefox,thunderbird}
+# move/resize
 #
-#super + alt + control + {h,j,k,l} ; {0-9}
-#	bspc node @{west,south,north,east} -r 0.{0-9}
-#
-#super + alt + p
-#	bspc config focus_follows_pointer {true,false}
-#
-## Smart resize, will grow or shrink depending on location.
-## Will always grow for floating nodes.
-#super + ctrl + alt + {Left,Down,Up,Right}
-#  n=10; \
-#  { d1=left;   d2=right;  dx=-$n; dy=0;   \
-#  , d1=bottom; d2=top;    dx=0;   dy=$n;  \
-#  , d1=top;    d2=bottom; dx=0;   dy=-$n; \
-#  , d1=right;  d2=left;   dx=$n;  dy=0;   \
-#  } \
-#  bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}

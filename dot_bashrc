@@ -12,7 +12,7 @@ PS1='[\u@\h \W]\$ '
 export EDITOR='/usr/bin/nvim'
 export VISUAL='/usr/bin/nvim'
 
-PATH="/var/lib/snapd/snap/bin:/var/lib/snapd/snap/bin:/home/prodip/.zplug/repos/zplug/zplug/bin:/home/prodip/.zplug/bin:/home/prodip/.local/bin/:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/home/prodip/.fzf/bin"
+PATH="/var/lib/snapd/snap/bin:/var/lib/snapd/snap/bin:/home/prodip/.zplug/repos/zplug/zplug/bin:/home/prodip/.zplug/bin:/home/prodip/.local/bin/:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/home/prodip/.fzf/bin:/home/prodip/.scripts"
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi

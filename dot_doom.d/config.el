@@ -212,6 +212,38 @@
       :desc "Zoxide find file"
       "f z" #'zoxide-find-file)
 
+(map! :leader
+      :desc "Doom Home"
+      "o h" #'+doom-dashboard/open)
 ; Key Bindings
 
 ;(require 'cc-mode)
+
+; openwith package
+    ;; (when (require 'openwith nil 'noerror)
+    ;;   (setq openwith-associations
+    ;;         (list
+    ;;          (list (openwith-make-extension-regexp
+    ;;                 '("mpg" "mpeg" "mp3" "mp4"
+    ;;                   "avi" "webm" "wav" "mov" "flv"
+    ;;                   "ogm" "ogg" "mkv"))
+    ;;                "mpv"
+    ;;                '(file))
+    ;;          (list (openwith-make-extension-regexp
+    ;;                 '("xbm" "pbm" "pgm" "ppm" "pnm"
+    ;;                   "png" "gif" "bmp" "tif" "jpeg" "jpg"))
+    ;;                "sxiv"
+    ;;                '(file))
+    ;;          (list (openwith-make-extension-regexp
+    ;;                 '("doc" "xls" "ppt" "odt" "ods" "odg" "odp"))
+    ;;                "libreoffice"
+    ;;                '(file))
+    ;;          '("\\.lyx" "lyx" (file))
+    ;;          '("\\.chm" "kchmviewer" (file))
+    ;;          (list (openwith-make-extension-regexp
+    ;;                 '("pdf" "ps" "ps.gz" "dvi"))
+    ;;                "okular"
+    ;;                '(file))
+    ;;          ))
+    ;;   (openwith-mode 1))
+; openwith package
