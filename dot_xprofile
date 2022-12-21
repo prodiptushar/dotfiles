@@ -1,7 +1,5 @@
 #nitrogen --restore &
 #compton &
-sxhkd &
-dunst &
 #dwmblocks &
 #emote &
 #bash ~/.config/polybar/launch.sh --forest &

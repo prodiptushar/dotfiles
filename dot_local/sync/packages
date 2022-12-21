@@ -16,6 +16,7 @@ binutils
 bison
 bpytop
 brave-bin
+bspwm
 cabal-install
 calibre
 caprine
@@ -139,6 +140,7 @@ pkgconf
 plocate
 pnmixer
 polkit-gnome
+polybar
 progress
 protonvpn-cli
 pulseaudio
