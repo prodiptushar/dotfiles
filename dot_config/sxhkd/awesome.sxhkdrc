@@ -1,0 +1,26 @@
+
+# Sound control
+F3
+	pactl set-sink-volume @DEFAULT_SINK@ +10% 
+F2
+	pactl set-sink-volume @DEFAULT_SINK@ -10% 
+
+# Launcher Unit
+super + e ; {e,q,f,b}
+      {emacsclient -c -a 'emacs',qutebrowser,firefox,brave}
+
+super+Return
+	st
+
+# ROfi and Dmenu
+# super+p
+# 	dmenu_run -l 8
+ # rofi -show combi -combi-modes "drun,window" -modes combi
+ # rofi -modi emoji -show emoji
+super+s;s
+	$HOME/.scripts/save-snip
+super+d ; {p,e,u,s}
+	{passmenu,$HOME/.scripts/dmoji,$HOME/.scripts/urlhandeler,$HOME/.scripts/get-snip}
+
+Print
+  flameshot "gui"

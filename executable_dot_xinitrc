@@ -2,7 +2,6 @@
 
 xsetroot -cursor_name left_ptr &
 pulseaudio &
-sxhkd &
 dunst &
 # exec awesome
 # exec dwm

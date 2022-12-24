@@ -147,6 +147,7 @@ pulseaudio
 pulsemixer
 pup
 python-adblock
+python-pdf2image
 python-pip
 python-pylsp-mypy
 python-pylsp-rope
@@ -186,7 +187,6 @@ rofi
 rofi-emoji
 rofi-pass
 rust
-sddm
 shellcheck
 speech-dispatcher
 stow
@@ -258,6 +258,7 @@ xorg-xdriinfo
 xorg-xev
 xorg-xgamma
 xorg-xhost
+xorg-xinit
 xorg-xinput
 xorg-xkbcomp
 xorg-xkbevd

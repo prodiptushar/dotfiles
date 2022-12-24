@@ -21,6 +21,8 @@ super + d ; {p,e,u,s,a}
 super + s ; s
 	$HOME/.scripts/save-snip
 
+Print
+  flameshot "gui"
 # Personal Config
 
 
