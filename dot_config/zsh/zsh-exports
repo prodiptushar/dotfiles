@@ -15,8 +15,8 @@ eval "$(zoxide init zsh)"
 # eval "`pip completion --zsh`"
 export PATH=$HOME/.local/bin/:$HOME/.scripts/:$HOME/.emacs.d/bin/:$HOME/.programs/bin/:$PATH
 
+. /etc/profile.d/fzf.zsh
 export VISUAL='nvim'
-
 export _ZO_EXCLUDE_DIRS=$HOME/Data/Phone/Android/data/*
 # # >>> conda initialize >>>
 # # !! Contents within this block are managed by 'conda init' !!
@@ -31,4 +31,5 @@ export _ZO_EXCLUDE_DIRS=$HOME/Data/Phone/Android/data/*
 #     fi
 # fi
 # unset __conda_setup
+setopt HIST_IGNORE_SPACE
 # # <<< conda initialize <<<

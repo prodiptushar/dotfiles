@@ -49,6 +49,7 @@ firefox
 fish
 flameshot
 flex
+foot
 fuse2
 fzf-git
 gcc
@@ -69,7 +70,6 @@ htop
 httpie
 hugo-extended-bin
 hunspell-en_us
-i3lock-fancy-git
 ibus-avro-git
 img2pdf
 ispell
@@ -77,12 +77,11 @@ isync
 joshuto
 jre
 kitty
-kmouth
-ktouch
 lazygit
 lf
 libfusion-git
 libreoffice-fresh
+libsixel
 libspeechd
 libtool
 libxft-bgra
@@ -124,7 +123,6 @@ ntp
 nvidia
 nvm
 nyxt
-okular
 os-prober
 pam-gnupg
 pandoc
@@ -147,7 +145,6 @@ pulseaudio
 pulsemixer
 pup
 python-adblock
-python-pdf2image
 python-pip
 python-pylsp-mypy
 python-pylsp-rope
@@ -184,8 +181,6 @@ rhvoice-language-english
 rhvoice-voice-alan
 ripgrep
 rofi
-rofi-emoji
-rofi-pass
 rust
 shellcheck
 speech-dispatcher
@@ -216,7 +211,6 @@ unzip
 urlview
 vicious
 vim
-vim-language-server
 vivaldi-ffmpeg-codecs
 vlc
 vlc-bittorrent
@@ -224,6 +218,7 @@ vnstat
 vsftpd
 w3m
 warpinator
+wezterm
 wget
 which
 wkhtmltopdf

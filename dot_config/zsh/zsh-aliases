@@ -6,6 +6,12 @@ alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git
 alias nvimrc='nvim ~/.config/nvim/'
 alias snvim='sudo -E nvim'
 alias zt="zathura"
+alias n="neomutt"
+alias nb="newsboat"
+alias yt="ytfzf -t"
+alias pg="ping google.com"
+alias cat=bat
+alias sx='source x/bin/activate'
 
 # alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
   
