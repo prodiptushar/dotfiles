@@ -1,4 +1,5 @@
 acpi
+acpid
 alacritty
 ani-cli
 anki-bin
@@ -16,6 +17,7 @@ binutils
 bison
 bpytop
 brave-bin
+bsp-layout-git
 bspwm
 cabal-install
 calibre
@@ -27,7 +29,6 @@ clang
 cmake
 code
 conky
-copyq
 dictd
 dmenu
 docker
@@ -76,6 +77,8 @@ ispell
 isync
 joshuto
 jre
+jupyter-console
+jupyter-nbclient
 kitty
 lazygit
 lf
@@ -125,7 +128,7 @@ nvm
 nyxt
 os-prober
 pam-gnupg
-pandoc
+pandoc-cli
 papirus-icon-theme
 paru
 patch
@@ -145,10 +148,12 @@ pulseaudio
 pulsemixer
 pup
 python-adblock
+python-jupyter-client
 python-pip
 python-pylsp-mypy
 python-pylsp-rope
 python-pynvim
+python-watchdog
 qbittorrent
 qt5-3d
 qt5-connectivity
@@ -186,6 +191,7 @@ shellcheck
 speech-dispatcher
 stow
 sudo
+sway
 sxhkd
 syncthing
 sysstat
@@ -218,7 +224,6 @@ vnstat
 vsftpd
 w3m
 warpinator
-wezterm
 wget
 which
 wkhtmltopdf
@@ -280,7 +285,7 @@ yarn
 yay-git
 youtube-dl
 yt-dlp
-ytfzf
+ytfzf-git
 zathura
 zathura-pdf-mupdf
 zoxide

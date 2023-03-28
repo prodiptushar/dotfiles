@@ -250,4 +250,6 @@
 ; openwith package
 ; elfeed
 (add-hook! 'elfeed-search-mode-hook #'elfeed-update)
+
 ; elfeed
+(setq +latex-viewers '(zathura))

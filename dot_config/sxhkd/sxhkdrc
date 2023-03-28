@@ -10,7 +10,8 @@
 
 # terminal emulator
 super + Return
-	st -e tmux
+	  kitty tmux
+	# st -e tmux
 # Launcher Unit
 super + e ; {e,q,f,b}
       {emacsclient -c -a 'emacs',qutebrowser,firefox,brave}

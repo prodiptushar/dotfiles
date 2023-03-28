@@ -397,7 +397,7 @@ set -g @plugin 'sainnhe/tmux-fzf'
 TMUX_FZF_LAUNCH_KEY="C-f"
 set -g @fzf-url-history-limit '2000'
 set  -g default-terminal "tmux-256color"
-set -ag terminal-overrides ",alacritty:RGB"
+set -ag terminal-overrides ",xterm-256color:RGB"
 
 # -- custom variables ----------------------------------------------------------
 

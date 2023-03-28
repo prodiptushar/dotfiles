@@ -2,7 +2,6 @@
 HISTFILE=$HOME/.config/zsh/history
 HISTSIZE=100000
 SAVEHIST=100000
-export PATH="$HOME/.local/bin":$PATH
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 export PATH=$HOME/.cargo/bin:$PATH
@@ -13,7 +12,7 @@ export PATH=$HOME/.cargo/bin:$PATH
 #eval "$(fnm env)"
 eval "$(zoxide init zsh)"
 # eval "`pip completion --zsh`"
-export PATH=$HOME/.local/bin/:$HOME/.scripts/:$HOME/.emacs.d/bin/:$HOME/.programs/bin/:$PATH
+export PATH=$HOME/.local/bin/:$HOME/.scripts/:$HOME/.config/emacs/bin/:$HOME/.programs/bin/:$PATH
 
 . /etc/profile.d/fzf.zsh
 export VISUAL='nvim'

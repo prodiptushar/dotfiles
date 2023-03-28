@@ -5,7 +5,5 @@ export FZF_CTRL_R_OPTS='--sort --exact'
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 export PYTHONPATH=$PYTHONPATH:/usr/bin/python3.9
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
-# eval "$(lua /home/prodip/build/z.lua/z.lua --init zsh)"
-#export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # zle     -N     fzf-history-widget-accept
 # bindkey "^[x" fzf-history-widget-accept
