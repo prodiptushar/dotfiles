@@ -13,6 +13,7 @@ awesome
 axel
 base
 bat
+bemenu-wayland
 binutils
 bison
 bpytop
@@ -22,6 +23,7 @@ bspwm
 cabal-install
 calibre
 caprine
+chafa
 chezmoi
 chromium
 cht.sh-git
@@ -29,15 +31,16 @@ clang
 cmake
 code
 conky
+ctpv-git
 dictd
-dmenu
+dmenu-wayland-git
 docker
 docker-compose
 dunst
 efibootmgr
 element-desktop
 elinks
-emacs-nativecomp
+emacs-gcc-wayland-devel-bin
 eslint
 espeak-ng
 exa
@@ -57,6 +60,7 @@ gcc
 gimp
 git
 github-cli
+glfw-x11
 gnuchess
 googler
 gparted
@@ -73,6 +77,7 @@ hugo-extended-bin
 hunspell-en_us
 ibus-avro-git
 img2pdf
+imv
 ispell
 isync
 joshuto
@@ -103,6 +108,7 @@ m4
 make
 mariadb
 materia-gtk-theme
+meson
 mpd
 mtpfs
 mu
@@ -123,11 +129,12 @@ noto-fonts-emoji
 npm
 nsxiv
 ntp
-nvidia
 nvm
 nyxt
+okular
 os-prober
 pam-gnupg
+pamixer
 pandoc-cli
 papirus-icon-theme
 paru
@@ -137,6 +144,8 @@ pcmanfm
 phantomjs-bin
 picom
 pidgin
+pipewire-pulse
+pistol-git
 pkgconf
 plocate
 pnmixer
@@ -144,7 +153,6 @@ polkit-gnome
 polybar
 progress
 protonvpn-cli
-pulseaudio
 pulsemixer
 pup
 python-adblock
@@ -192,6 +200,7 @@ speech-dispatcher
 stow
 sudo
 sway
+swaybg
 sxhkd
 syncthing
 sysstat
@@ -204,6 +213,7 @@ texlive-latexextra
 timeshift
 tldr
 tmux
+tofi
 tree
 ttf-fira-code
 ttf-fira-mono
@@ -224,11 +234,14 @@ vnstat
 vsftpd
 w3m
 warpinator
+waybar
 wget
 which
 wkhtmltopdf
+wl-clipboard
+wl-clipboard-x11
 words
-xclip
+xf86-video-nouveau
 xf86-video-vesa
 xfce4-power-manager
 xorg-bdftopcf

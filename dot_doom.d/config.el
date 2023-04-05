@@ -183,10 +183,21 @@
       mu4e-get-mail-command "mbsync -qa"
       mu4e-update-interval 300
       )
-
+(setq +mu4e-gmail-accounts '(("prodiptushar01@gmail.com" . "/prodip")))
+(add-to-list 'load-path "~/.config/emacs/modules/email/mu4e")
+(setq smtpmail-stream-type 'starttls)
+(setq smtpmail-default-smtp-server "smtp.gmail.com")
+(setq smtpmail-smtp-server "smtp.gmail.com")
+(setq smtpmail-smtp-service 587)
+(setq smtpmail-debug-info t)
+(auth-source-pass-enable)
+(setq auth-sources '(password-store))
+(setq auth-source-debug t)
+(setq auth-source-do-cache nil)
 (setq sendmail-program "/usr/bin/msmtp"
       send-mail-function #'smtpmail-send-it
       message-sendmail-f-is-evil t
+      smtpmail-smtp-user "prodip"
       smtpmail-smtp-server "smtp.gmail.com"
       message-sendmail-extra-arguments '("--read-envelope-from")
       message-send-mail-function #'message-send-mail-with-sendmail)
