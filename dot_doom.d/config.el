@@ -33,7 +33,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-zenburn)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -42,7 +42,7 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Document/org/")
-
+(setq org-agenda-files '("~/Document/org/todo.org"))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -190,7 +190,6 @@
 (setq smtpmail-smtp-server "smtp.gmail.com")
 (setq smtpmail-smtp-service 587)
 (setq smtpmail-debug-info t)
-(auth-source-pass-enable)
 (setq auth-sources '(password-store))
 (setq auth-source-debug t)
 (setq auth-source-do-cache nil)
@@ -206,8 +205,6 @@
 ;;
 (setq company-global-modes '(not vterm))
 
-(define-key evil-insert-state-map (kbd "C-l") 'forward-char)
-(define-key evil-insert-state-map (kbd "C-h") 'backward-char)
 
 
 ; quickscope
@@ -215,10 +212,11 @@
 ; quickscope
 
 ; Key Bindings
-
 (require 'key-chord)
 (key-chord-mode 1)
 (key-chord-define evil-insert-state-map  "jk" 'evil-normal-state)
+
+(map! :n "s" 'evil-avy-goto-char)
 
 (map! :leader
       :desc "Zoxide find file"
@@ -227,6 +225,11 @@
 (map! :leader
       :desc "Doom Home"
       "o h" #'+doom-dashboard/open)
+
+(define-key evil-insert-state-map (kbd "C-l") 'forward-char)
+(define-key evil-insert-state-map (kbd "C-h") 'backward-char)
+(define-key evil-normal-state-map (kbd "s") 'avy-goto-char-2)
+
 ; Key Bindings
 
 ;(require 'cc-mode)
@@ -259,8 +262,4 @@
     ;;          ))
     ;;   (openwith-mode 1))
 ; openwith package
-; elfeed
-(add-hook! 'elfeed-search-mode-hook #'elfeed-update)
-
-; elfeed
 (setq +latex-viewers '(zathura))

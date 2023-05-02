@@ -12,6 +12,7 @@ automake
 awesome
 axel
 base
+base-devel
 bat
 bemenu-wayland
 binutils
@@ -40,9 +41,10 @@ dunst
 efibootmgr
 element-desktop
 elinks
-emacs-gcc-wayland-devel-bin
+emacs-nativecomp
 eslint
 espeak-ng
+eww-wayland
 exa
 fakeroot
 fd
@@ -55,6 +57,7 @@ flameshot
 flex
 foot
 fuse2
+fuzzel
 fzf-git
 gcc
 gimp
@@ -75,6 +78,7 @@ htop
 httpie
 hugo-extended-bin
 hunspell-en_us
+hyprland-git
 ibus-avro-git
 img2pdf
 imv
@@ -114,7 +118,6 @@ mtpfs
 mu
 mutt-wizard-git
 neofetch
-neovim
 network-manager-applet
 networkmanager
 neuron-zettelkasten-bin
@@ -193,14 +196,15 @@ reflector
 rhvoice-language-english
 rhvoice-voice-alan
 ripgrep
+river
 rofi
-rust
 shellcheck
 speech-dispatcher
 stow
 sudo
 sway
 swaybg
+swhkd-git
 sxhkd
 syncthing
 sysstat
@@ -210,7 +214,6 @@ texinfo
 texlab
 texlive-core
 texlive-latexextra
-timeshift
 tldr
 tmux
 tofi
@@ -218,6 +221,7 @@ tree
 ttf-fira-code
 ttf-fira-mono
 ttf-firacode-nerd
+ttf-font-awesome
 ttf-jetbrains-mono
 ttf-joypixels
 ttf-nerd-fonts-symbols-1000-em
@@ -234,12 +238,13 @@ vnstat
 vsftpd
 w3m
 warpinator
-waybar
+waybar-hyprland
 wget
 which
 wkhtmltopdf
 wl-clipboard
 wl-clipboard-x11
+wofi
 words
 xf86-video-nouveau
 xf86-video-vesa

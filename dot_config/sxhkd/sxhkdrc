@@ -5,16 +5,16 @@
 # Personal Config
 
 # Sound control
-{F3,F2}
-	pactl set-sink-volume @DEFAULT_SINK@ {+10%,-10%}
+{XF86AudioRaiseVolume,XF86AudioLowerVolume}
+	pactl set-sink-volume @DEFAULT_SINK@ {+5%,-5%}
 
 # terminal emulator
 super + Return
-	  kitty tmux
+	st
 	# st -e tmux
 # Launcher Unit
-super + e ; {e,q,f,b}
-      {emacsclient -c -a 'emacs',qutebrowser,firefox,brave}
+super + e ; {e,q,b,s}
+      {emacsclient -c --alternate-editor=,qutebrowser,brave,systemctl suspend}
 
 super + d ; {p,e,u,s,a}
 	{passmenu,$HOME/.scripts/dmoji,$HOME/.scripts/urlhandeler,$HOME/.scripts/get-snip,dmenu_run -l 5}

@@ -4,13 +4,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auth-source-save-behavior nil)
- '(custom-safe-themes
-   '("e3daa8f18440301f3e54f2093fe15f4fe951986a8628e98dcd781efbec7a46f2" default))
- '(newsticker-url-list
-   '(("chris titus" "https://christitus.com/categories/linux/index.xml" nil nil nil)))
  '(package-selected-packages '(openwith org-web-tools zoxide fancy-dabbrev))
- '(smtpmail-smtp-server "smtp.gmail.com")
- '(smtpmail-smtp-service 25)
+ '(smtpmail-smtp-server "smtp.gmail.com" t)
+ '(smtpmail-smtp-service 25 t)
  '(warning-suppress-types
    '((comp)
      (doom-first-buffer-hook)

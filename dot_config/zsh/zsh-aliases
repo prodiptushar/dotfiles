@@ -6,7 +6,7 @@ alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git
 alias nvimrc='nvim ~/.config/nvim/'
 alias snvim='sudo -E nvim'
 alias zt="zathura"
-alias n="neomutt"
+alias nm="neomutt"
 alias nb="newsboat"
 alias yt="ytfzf -t"
 alias pg="ping google.com"
@@ -85,7 +85,5 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	# echo 'Other OS'
 	;;
 esac
-alias r='lfub'
 alias e='chezmoi edit --apply'
 alias cm='chezmoi'
-alias ls=exa

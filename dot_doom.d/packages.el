@@ -54,3 +54,4 @@
 (package! zoxide)
 (package! key-chord)
 (package! evil-quickscope)
+(package! evil-snipe :disable t)
