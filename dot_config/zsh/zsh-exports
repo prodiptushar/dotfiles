@@ -7,7 +7,7 @@ export MANWIDTH=999
 export PATH=$HOME/.cargo/bin:$PATH
 GUIX_PROFILE="/home/prodip/.guix-profile"
     . "$GUIX_PROFILE/etc/profile"
- export MOZ_ENABLE_WAYLAND=1
+ # export MOZ_ENABLE_WAYLAND=1
 GUIX_PROFILE="/home/prodip/.config/guix/current"
     . "$GUIX_PROFILE/etc/profile"
 export GUIX_LOCPATH=$HOME/.guix-profile/lib/locale
@@ -19,7 +19,7 @@ export GUIX_LOCPATH=$HOME/.guix-profile/lib/locale
 eval "$(zoxide init zsh)"
 # eval "`pip completion --zsh`"
 export PATH=$HOME/.local/bin/:$HOME/.scripts/:$HOME/.config/emacs/bin/:$HOME/.programs/bin/:$PATH
-
+export NIX_PATH=${NIX_PATH:+$NIX_PATH:}$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels
 . /etc/profile.d/fzf.zsh
 export VISUAL='nvim'
 export _ZO_EXCLUDE_DIRS=$HOME/Data/Phone/Android/data/*
@@ -36,5 +36,26 @@ export _ZO_EXCLUDE_DIRS=$HOME/Data/Phone/Android/data/*
 #     fi
 # fi
 # unset __conda_setup
+# Nix
+export NIX_PATH=${NIX_PATH:+$NIX_PATH:}$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels
+source /etc/profile.d/nix.sh
+
+
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
+
+# Nix
 setopt HIST_IGNORE_SPACE
 # # <<< conda initialize <<<

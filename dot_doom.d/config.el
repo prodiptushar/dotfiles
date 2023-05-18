@@ -33,7 +33,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-zenburn)
+(setq doom-theme 'doom-one)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -175,7 +175,7 @@
 
 
 ;; Mail
-; Whithout this line under , mu4e does not seams to work in doom emacs
+;; Whithout this line under , mu4e does not seams to work in doom emacs
 (setq mu4e-headers-buffer-name "*mu4e-headers*")
 
 (setq mu4e-index-cleanup nil
@@ -184,13 +184,12 @@
       mu4e-update-interval 300
       )
 (setq +mu4e-gmail-accounts '(("prodiptushar01@gmail.com" . "/prodip")))
-(add-to-list 'load-path "~/.config/emacs/modules/email/mu4e")
 (setq smtpmail-stream-type 'starttls)
 (setq smtpmail-default-smtp-server "smtp.gmail.com")
 (setq smtpmail-smtp-server "smtp.gmail.com")
 (setq smtpmail-smtp-service 587)
 (setq smtpmail-debug-info t)
-(setq auth-sources '(password-store))
+;; (setq auth-sources '(password-store))
 (setq auth-source-debug t)
 (setq auth-source-do-cache nil)
 (setq sendmail-program "/usr/bin/msmtp"
@@ -207,11 +206,11 @@
 
 
 
-; quickscope
+;; quickscope
 (global-evil-quickscope-mode 1)
-; quickscope
+;; quickscope
 
-; Key Bindings
+;; Key Bindings
 (require 'key-chord)
 (key-chord-mode 1)
 (key-chord-define evil-insert-state-map  "jk" 'evil-normal-state)
@@ -230,11 +229,11 @@
 (define-key evil-insert-state-map (kbd "C-h") 'backward-char)
 (define-key evil-normal-state-map (kbd "s") 'avy-goto-char-2)
 
-; Key Bindings
+;; Key Bindings
 
-;(require 'cc-mode)
+;;(require 'cc-mode)
 
-; openwith package
+;; openwith package
     ;; (when (require 'openwith nil 'noerror)
     ;;   (setq openwith-associations
     ;;         (list
@@ -261,5 +260,12 @@
     ;;                '(file))
     ;;          ))
     ;;   (openwith-mode 1))
-; openwith package
+;; openwith package
 (setq +latex-viewers '(zathura))
+;; elfeed
+(setq rmh-elfeed-org-files (list "~/Document/org/elfeed.org"))
+(after! elfeed
+  (setq elfeed-curl-program-name "/usr/bin/curl")
+  (setq elfeed-search-filter "@1-month-ago"))
+(add-hook! 'elfeed-search-mode-hook #'elfeed-update)
+;; elfeed

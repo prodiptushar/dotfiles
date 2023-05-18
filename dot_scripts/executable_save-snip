@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bookmark="$(xclip -o)"
+bookmark="$(wl-paste)"
 file="$HOME/.local/share/chezmoi/dot_local/sync/snippets"
 
 if grep -q "$bookmark" "$file"; then

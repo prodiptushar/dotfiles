@@ -1,5 +1,5 @@
 #!/bin/sh
-alias f='fzf --bind "enter:execute(open {})"'
+alias f='fzf --bind "enter:execute(nuke {})"'
 alias z='zi'
 alias g='lazygit'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
@@ -11,6 +11,7 @@ alias nb="newsboat"
 alias yt="ytfzf -t"
 alias pg="ping google.com"
 alias cat=bat
+alias r=lfrun
 alias sx='source x/bin/activate'
 
 # alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'

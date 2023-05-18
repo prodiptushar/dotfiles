@@ -8,7 +8,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 export NNN_PLUG='z:autojump;o:fzopen;p:preview-tui'
 export NNN_FIFO='/tmp/nnn.fifo'
 export NNN_OPENER=nuke
-r ()
+n ()
 {
     # Block nesting of nnn in subshells
     if [[ "${NNNLVL:-0}" -ge 1 ]]; then
